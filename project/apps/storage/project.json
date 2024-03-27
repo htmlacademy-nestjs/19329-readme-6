@@ -1,0 +1,24 @@
+{
+  "name": "storage",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/storage/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "storage:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "storage:build:development"
+        },
+        "production": {
+          "buildTarget": "storage:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
